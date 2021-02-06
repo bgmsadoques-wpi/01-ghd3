@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>A1: Shape Clicker</title>
+
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+
+        <script src="ShapeGameSrc/svgControl.js"></script>
+        <script src="ShapeGameSrc/RandomShapeMaker.js"></script>
+        <script src="ShapeGameSrc/StartGame.js"></script>
+        <script src="ShapeGameSrc/Timer.js"></script>
+    </head>
+
+    <body>
+        <form name="GameMenu" id="GameMenu">
+            <label> Welcome to shape clicker!</label> <br> <br>
+            <label> shapes to make: </label>
+            <input type="text" id="shapesToMake" name="shapesToMake" value="10"> <br>
+            <input type="button" id="startGameButton" name="start" value="start" onclick="startGame(this)">
+            <input type="button" id="stopGameButton" name="stop" value="stop" disabled onclick="stopGame(this)"> <br>
+            <div id="timerDisplay"> </div>
+        </form>
+
+        <svg id="vis" onload="makeSVG2D('vis', 1000, 750)"> </svg>
+    </body>
+</html>
